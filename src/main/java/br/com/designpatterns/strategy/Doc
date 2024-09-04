@@ -1,0 +1,19 @@
+                    #### STRATEGY ####
+Padrão comportamental que permite escolher um algoritmo em tempo de execução. Foca em variar algoritmos
+independentes de clientes.
+
+Define uma interface comum para todos os algoritmos (estratégias).
+As classes concretas implementam essa interface com diferentes variantes do algoritmo.
+Um contexto mantém uma referência para um objeto de estratégia e chama o método apropriado.
+
+Quando Usar:
+
+Quando você possui várias variações de um algoritmo (ou operação) que pode ser aplicado em uma situação específica.
+Quando o comportamento específico de uma classe deve ser escolhido em tempo de execução.
+Quando você deseja evitar o uso de múltiplos condicionais (if-else ou switch) para selecionar diferentes variantes
+de um comportamento.
+
+Como Funciona:
+Define uma interface comum para todos os algoritmos (estratégias).
+As classes concretas implementam essa interface com diferentes variantes do algoritmo.
+Um contexto mantém uma referência para um objeto de estratégia e chama o método apropriado.

@@ -1,0 +1,22 @@
+                    #### CHAIN OF RESPONSABILITY ####
+
+Padrão comportamental que encadeia manipuladores, onde cada manipulador decide se trata a solicitação
+ou a passa adiante.
+
+Esse padrão é aplicável quando eu tenho várias regras de negócio e não sei qual delas vai ser
+aplicada no momento e com isso criamos os Handlers/Manipuladores que vão identificar se a regra
+é aplicável por cada um, sendo chamado de maneira encadeada.
+
+Usado quando você tem uma série de ações que podem ser executadas em uma solicitação, onde a solicitação pode ser
+tratada por diferentes manipuladores, e a ordem ou a capacidade de cada manipulador pode mudar dinamicamente.
+
+Quando Usar:
+Quando você deseja que uma solicitação possa ser tratada por mais de um objeto (possivelmente nenhum ou vários).
+Quando você não sabe antecipadamente qual objeto deve processar uma solicitação específica.
+Quando você deseja criar uma estrutura de processamento dinâmica, sem definir explicitamente o receptor.
+
+Como Funciona:
+Define uma classe base comum para os manipuladores (handlers) com uma referência para o próximo manipulador na cadeia.
+Cada manipulador implementa o método para processar a solicitação ou a passa para o próximo manipulador na cadeia.
+A solicitação é passada ao longo da cadeia até ser tratada por um dos manipuladores ou até o fim da cadeia ser
+alcançado.
